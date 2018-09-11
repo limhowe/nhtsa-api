@@ -1,0 +1,58 @@
+{
+  "name": "nhtsa-api",
+  "version": "0.10.0",
+  "description": "Create Node.js API development with nhtsa API",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && babel app -d build",
+    "start": "nodemon index.js",
+    "test": "NODE_ENV=test BABEL_DISABLE_CACHE=1 mocha --recursive --reporter spec --compilers js:babel-register tests",
+    "lint": "eslint app",
+    "test:watch": "nodemon --exec 'npm run test' tests"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/limhowe/nhtsa-api"
+  },
+  "keywords": [
+    "express",
+    "es6",
+    "rest",
+    "api",
+    "mongo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.18.0",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.0",
+    "helmet": "^3.1.0",
+    "lodash": "^4.16.4",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "eslint": "^3.8.1",
+    "eslint-config-google": "^0.7.1",
+    "eslint-plugin-babel": "^4.0.0",
+    "mocha": "^3.1.2",
+    "nodemon": "^1.11.0"
+  }
+}
